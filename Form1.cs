@@ -65,7 +65,7 @@ namespace CRUDDapper
         {
             try
             {
-                using IDbConnection connection = AppConnection.Connection;
+                using IDbConnection connection = AppConnection.GetConnection();
                 studentBindingSource.DataSource = connection.Query<Student>("select * from Students");
                 pnlContainer.Enabled = false;
 
@@ -142,7 +142,7 @@ namespace CRUDDapper
                 {
                     if (studentBindingSource.Current is Student student)
                     {
-                        using IDbConnection connection = AppConnection.Connection;
+                        using IDbConnection connection = AppConnection.GetConnection();
                         int result = connection.Execute("delete from Students where StudentID = @StudentID", new { StudentID = student.StudentID });
                         if (result != 0)
                         {
@@ -167,7 +167,7 @@ namespace CRUDDapper
                 studentBindingSource.EndEdit();
                 if (studentBindingSource.Current is Student student)
                 {
-                    using IDbConnection connection = AppConnection.Connection;
+                    using IDbConnection connection = AppConnection.GetConnection();
 
                     // Insert
                     if (objState == EntityState.Added)
