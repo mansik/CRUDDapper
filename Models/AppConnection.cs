@@ -14,7 +14,7 @@ namespace CRUDDapper.Models
     {
         public static string ConnectionString => ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
 
-        public static SqlConnection GetConnection()
+        public static IDbConnection GetConnection()
         {
             return new SqlConnection(ConnectionString);
             // ADO.NET에서 사용, Dapper는 자체적으로 Open()함수를 호출하므로 아래가 필요없다.

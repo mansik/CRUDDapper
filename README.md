@@ -12,8 +12,8 @@
 * Package 
   * [ ] DevExpress 18.2
 * NuGet
-  * [x] Dapper
   * [x] System.Data.SqlClient
+  * [x] Dapper
 
 
 ## 작업
