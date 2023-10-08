@@ -3,6 +3,9 @@
 [C# Tutorial Insert Update Delete View data from database using Dapper CRUD ADO NET FoxLearn](https://youtu.be/pn8wrK3FyGA?si=WnoAhCHZ5CCy_ggz)
 
 ## 설명: CRUD Dapper(테이블 클래스, DataGridView 데이터 원본을 클래스로 선택, Stored Procedure)
+* DataGridView클릭시 코딩없이 input 컨트롤에 데이터 연동
+* DataGridView에 데이터 원본을 클래스로 선택,  input 컨트롤에 DataBinding을 연결
+* 
 * C# Mini Project CRUD Insert Update Delete and View Student Profile data from SQL database 
 * using ADO.NET Dapper ORM, Stored Procedure in C# step by step
 
