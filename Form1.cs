@@ -1,9 +1,6 @@
 ﻿using CRUDDapper.Models;
 using Dapper;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq.Expressions;
 
 namespace CRUDDapper
 {
@@ -143,7 +140,7 @@ namespace CRUDDapper
                     if (studentBindingSource.Current is Student student)
                     {
                         using IDbConnection connection = AppConnection.GetConnection();
-                        int result = connection.Execute("delete from Students where StudentID = @StudentID", new { StudentID = student.StudentID });
+                        int result = connection.Execute("delete from Students where StudentID = @StudentID", new { student.StudentID });
                         if (result != 0)
                         {
                             studentBindingSource.RemoveCurrent();
